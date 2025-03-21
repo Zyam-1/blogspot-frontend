@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import SingleBLog from "./SingleBlogPrev";
+import SingleBlogPrev from "./SingleBlogPrev";
 import blogService from "../../services/BlogService";
 
 const Blogs = () => {
@@ -11,8 +11,9 @@ const Blogs = () => {
     blogService
       .getAllPostBlogs()
       .then((response) => {
-        console.log("Success");
-        console.log(response);
+        // console.log("Success");/
+        // console.log(response.data);
+        setBlogs(response.data);
       })
       .catch((error) => {
         console.log("error");
@@ -22,7 +23,9 @@ const Blogs = () => {
 
   return (
     <Container>
-      <SingleBLog />
+      {blogs.map((index, blog) => {
+        <SingleBlogPrev title={blog.title} />;
+      })}
     </Container>
   );
 };

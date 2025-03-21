@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-function SingleBLog() {
+function SingleBlogPrev() {
   return (
     <Card className="mt-2">
       {/* <Card.Header>Featured</Card.Header> */}
@@ -20,4 +20,4 @@ function SingleBLog() {
   );
 }
 
-export default SingleBLog;
+export default SingleBlogPrev;
