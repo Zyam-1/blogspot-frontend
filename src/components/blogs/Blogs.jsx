@@ -13,7 +13,7 @@ const Blogs = () => {
       .getAllPostBlogs()
       .then((response) => {
         // console.log("Success");/
-        // console.log(response.data);
+        console.log(response.data);
         setBlogs(response.data);
       })
       .catch((error) => {
@@ -31,6 +31,7 @@ const Blogs = () => {
             title={blog.title}
             content={blog.content.substr(0, 50)}
             commentCount={blog.comments.length}
+            _id={blog._id}
           />
         );
       })}

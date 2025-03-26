@@ -10,15 +10,15 @@ class BlogService extends GenericService {
   };
 
   getSingleBlog = (id) => {
-    this.get("blogs/" + id);
+    return this.get("blogs/" + id);
   };
 
   deleteBlog = (id) => {
-    this.delete("blogs/" + id);
+    return this.delete("blogs/" + id);
   };
 
   updateBlog = (id, data) => {
-    this.update("blogs/" + id, data);
+    return this.update("blogs/" + id, data);
   };
 }
 
